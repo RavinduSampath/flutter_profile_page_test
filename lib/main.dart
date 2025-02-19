@@ -42,35 +42,45 @@ class _HomeState extends State<Home> {
               color: Colors.black,
               thickness: 2,
             ),
-            Text(
+            Row(children: [Text(
               "Name",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w900,
                 color: Colors.black,
               ),
-            ),
-            Text(
-              "Diluka"
-            ),
-            Text(
+            ),],),
+            Row(children: [Text(
+              "Diluka",style: TextStyle
+              (fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: Colors.black),
+            ),],),
+
+
+            Row(children: [Text(
               "Email",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w900,
                 color: Colors.black,
               ),
-            ),
+            ),],),
             Row(
               children: [const Icon(Icons.email),
             Text(
               
-              "  diluka.w@nsbm.ac.lk"
+              "  diluka.w@nsbm.ac.lk",
+              style: TextStyle
+              (fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: Colors.black),
             ),],
 
 
             ),
-            Text(
+            Row(children: [
+              Text(
               "Points",
               style: TextStyle(
                 fontSize: 20,
@@ -78,17 +88,15 @@ class _HomeState extends State<Home> {
                 color: Colors.black,
               ),
             ),
+            ],),
 
             Row(
-              children: [const Icon(Icons.star),
-            
-              
+              children: [const Icon(Icons.star),  
               Text(
               '  $counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),],
-
-
+            
             ),
           ],
         ),
@@ -96,7 +104,8 @@ class _HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        backgroundColor: Color(0xFF000000),
+        child: const Icon(Icons.add, color: Colors.white,),
       ),
     );
   }
